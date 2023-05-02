@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-main:#18122B;
+    --bg-primary:#ECF2FF;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Lexend Deca Light";
+}
+
+body{
+    background-color:var(--bg-primary)
+}
+
+a,li{
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--bg-primary);
+}
+
+header{
+    background-color: var(--bg-main);
+    height: 10rem;
+    color: var(--bg-primary);
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: red;*/
+}
+
+
+.container ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    height: 10rem;
+}
+
+.container ul li{
+    height: 10rem;
+    line-height: 10rem;
+    position: relative;
+    cursor: pointer;
+    /*background-color: yellow;*/
+}
+
+.container ul li a:hover, .container ul li:hover{
+    color: red;
+}
+
+.container .drop-down{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-main);
+    height: auto;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    top: 15rem;
+    transition: all .3s linear;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.container ul li:hover > .drop-down{
+    visibility: visible;
+    opacity: 1;
+    top: 10rem;
+}
+
+.container .drop-down li{
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    text-align: center;
+    transition: all .3s linear;
+    /*border: 1px solid red;*/
+}
+
+.container .drop-down li:hover{
+    background-color: var(--bg-primary);
+}
+
+
+/*hero sectoin style */
+h2 {
+    font-size: clamp(2.8rem, 2rem + 3vw, 4.8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    color: var(--bg-primary);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 1rem + 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--bg-primary);
+}
+
+button {
+    margin: 6rem;
+    padding: 1rem 2rem;
+    background: var(--btn-bg);
+    color: var(--bg-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+    border: 1px solid var(--bg-primary);
+    border-radius: 0.5rem;
+    transition: background-color 300ms;
+}
+
+button:focus,
+button:hover {
+    background: var(--bg-primary);
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    height: 90rem;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero > * {
+    grid-area: 1 / -1;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Getting Started */
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
