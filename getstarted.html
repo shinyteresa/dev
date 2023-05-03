@@ -125,6 +125,22 @@ body {
 .form button:hover {
   background: rgb(88, 56, 250);
 }
+.form-check {
+    display: block;
+    min-height: 1.75rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+.form-check-label {
+    font-size: 13px;
+}
 /*Responsive*/
 @media screen and (max-width: 500px) {
   .form .column {
@@ -433,6 +449,15 @@ body {
               <textarea class="form-control" placeholder="Tell us more about your project, needs and budget" style="height: 120px;"></textarea>
           </div>
           </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label small" for="flexCheckChecked">
+                Yes, I'd like to receive occasional marketing emails from us. I have the
+                right to opt out at any time.
+                <a href="#"> View privacy policy</a>.
+            </label>
+        </div>
         </div>
         <button>Submit</button>
       </form>
